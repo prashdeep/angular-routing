@@ -1,0 +1,24 @@
+
+
+  <table style="border:1px solid black;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>location</th>
+        <th>Login</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.location}}</td>
+        <td><input type="button" name="Login" (click)="login(user);" value="Button"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+
+
