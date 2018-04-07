@@ -1,3 +1,8 @@
 <p>
   my-details works!
 </p>
+<ul>
+  <li *ngFor="let user of users">
+    {{user.id}}, {{user.name}}, {{user.email}}, {{user.website}}
+  </li>
+</ul>

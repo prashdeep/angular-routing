@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute} from '@angular/router';
@@ -9,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule} from '@angular/forms';
 import { MyDetailsComponent } from './my-details/my-details.component';
+import { UserService } from './user.service';
 
 const appRoutes:Routes=[
   {
@@ -34,15 +36,18 @@ const appRoutes:Routes=[
     DashboardComponent,
     LoginComponent,
     MyDetailsComponent
+    
   ],
   imports: [
     BrowserModule,
-    
+    HttpModule,
     RouterModule.forRoot(appRoutes),
     FormsModule
     
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
