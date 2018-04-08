@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule} from '@angular/forms';
 import { MyDetailsComponent } from './my-details/my-details.component';
 import { UserService } from './user.service';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes:Routes=[
   {
@@ -35,7 +36,8 @@ const appRoutes:Routes=[
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    MyDetailsComponent
+    MyDetailsComponent,
+    ContactComponent
     
   ],
   imports: [
