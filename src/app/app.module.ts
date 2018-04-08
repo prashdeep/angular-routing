@@ -12,6 +12,7 @@ import { FormsModule} from '@angular/forms';
 import { MyDetailsComponent } from './my-details/my-details.component';
 import { UserService } from './user.service';
 import { ContactComponent } from './contact/contact.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const appRoutes:Routes=[
   {
@@ -37,7 +38,8 @@ const appRoutes:Routes=[
     DashboardComponent,
     LoginComponent,
     MyDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    PipeComponent
     
   ],
   imports: [
