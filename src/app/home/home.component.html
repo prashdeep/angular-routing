@@ -1,5 +1,5 @@
 
-
+<div style="padding:20px; margin-top:20px;">
   <table style="border:1px solid black;">
     <thead>
       <tr>
@@ -14,10 +14,34 @@
         <td>{{user.name}}</td>
         <td>{{user.age}}</td>
         <td>{{user.location}}</td>
-        <td><input type="button" name="Login" (click)="login(user);" value="Button"></td>
+        <td><input type="button" name="Login" 
+          (click)="login(user);" 
+          value="Button"></td>
       </tr>
     </tbody>
   </table>
+
+  <!-- string interpolation -->
+  <input type="text" value="{{name}}">
+  <input type="text" [value]="name">
+
+
+  <input #emailText type="text" (keyup.enter)="keyPress(email.value)">
+ 
+
+  <div [style.background-color]="color"
+       [style.width]="divWidth" 
+       [style.min-height]="divHeight">
+
+    <span>Hello</span>
+  </div>
+
+  <input type="button" value="Submit" (click)="log($event)">
+  
+  <input type="text" 
+       [(ngModel)]="email" 
+       (keyup.enter)="bind()">
+</div>
   
 
 
