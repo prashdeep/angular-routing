@@ -13,6 +13,7 @@ import { MyDetailsComponent } from './my-details/my-details.component';
 import { UserService } from './user.service';
 import { ContactComponent } from './contact/contact.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes:Routes=[
   {
@@ -26,6 +27,10 @@ const appRoutes:Routes=[
   {
     path:'login/:id/:name',
     component: LoginComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
   }
 ]
 
@@ -39,7 +44,8 @@ const appRoutes:Routes=[
     LoginComponent,
     MyDetailsComponent,
     ContactComponent,
-    PipeComponent
+    PipeComponent,
+    ProfileComponent
     
   ],
   imports: [

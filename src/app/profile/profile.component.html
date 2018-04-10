@@ -1,0 +1,23 @@
+<form class="container">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input  required ngModel minlength="3" maxlength="5" #firstName="ngModel" type="text" id="firstName" name="firstName" class="form-control">
+    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+     <div *ngIf="firstName.errors.required">First Name is required</div>
+     <div *ngIf="firstName.errors.minlength">First Name should be minimum 3 characters long</div>
+    </div>
+  </div>
+  <div>
+      <label for="lastName">Last Name</label>
+      <input ngModel  #lastName="ngModel" type="text" id="lastName" name="lastName" class="form-control">
+  </div>
+  <div>
+      <label for="dob">Date Of Birth</label>
+      <input ngModel  #dob="ngModel" pattern="/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/" type="text" id="dob" name="dob" class="form-control">
+      <div class="alert alert-danger" *ngIf="dob.touched && !dob.valid">
+          <div *ngIf="dob.errors.required">Date of Birth is required</div>
+          <div *ngIf="dob.errors.pattern">Pattern of DOB is incorrect</div>
+         </div>
+    </div>
+  <button class="btn-btn-primary">Submit</button>
+</form>
