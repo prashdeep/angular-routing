@@ -36,6 +36,10 @@ const appRoutes:Routes=[
   {
     path:'about',
     component: AboutComponent
+  },
+  {
+    path:'pipe',
+    component: PipeComponent
   }
 
 ]

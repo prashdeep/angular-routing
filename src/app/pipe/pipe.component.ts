@@ -5,9 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template:`
     Name of the Persons is {{name | uppercase | lowercase}} <br/>
     Number of Students is {{students | number}} <br/>
-    Ratings : {{rating | number:'1.2-2'}} <br/>
-    Price is : {{price | currency:'INR':'true':'2.2-2'}} <br/>
-    Date is : {{dateVar | date}}
+    Ratings : {{rating | number:'2.2-3'}} <br/>
+    Price is : {{price | currency:'USD':'true':'2.2-3'}} <br/>
+    Date is : {{dateVar | date:'short'}}
 
   `,
   styleUrls: ['./pipe.component.css']
@@ -15,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
 export class PipeComponent  {
 
   constructor() { }
+
   name:string = 'pradeep';
   rating:number = 4.987456;
   students:number = 89562;
