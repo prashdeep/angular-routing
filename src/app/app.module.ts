@@ -42,6 +42,10 @@ const appRoutes:Routes=[
   {
     path:'test',
     component:ObservableComponent
+  },
+  {
+    path:'pipe',
+    component: PipeComponent
   }
 ]
 
