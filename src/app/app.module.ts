@@ -1,3 +1,4 @@
+import { OService } from './observable/Oservice';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
+import { ObservableComponent } from './observable/observable.component';
 
 const appRoutes:Routes=[
   {
@@ -36,8 +38,11 @@ const appRoutes:Routes=[
   {
     path:'about',
     component: AboutComponent
+  },
+  {
+    path:'test',
+    component:ObservableComponent
   }
-
 ]
 
 @NgModule({
@@ -52,7 +57,8 @@ const appRoutes:Routes=[
     ContactComponent,
     PipeComponent,
     ProfileComponent,
-    AboutComponent
+    AboutComponent,
+    ObservableComponent
     
   ],
   imports: [
@@ -63,7 +69,8 @@ const appRoutes:Routes=[
     
   ],
   providers: [
-    UserService
+    UserService,
+    OService
   ],
   bootstrap: [AppComponent]
 })
