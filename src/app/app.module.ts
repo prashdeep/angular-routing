@@ -14,6 +14,7 @@ import { UserService } from './user.service';
 import { ContactComponent } from './contact/contact.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes:Routes=[
   {
@@ -31,7 +32,12 @@ const appRoutes:Routes=[
   {
     path:'profile',
     component: ProfileComponent
+  },
+  {
+    path:'about',
+    component: AboutComponent
   }
+
 ]
 
 @NgModule({
@@ -45,7 +51,8 @@ const appRoutes:Routes=[
     MyDetailsComponent,
     ContactComponent,
     PipeComponent,
-    ProfileComponent
+    ProfileComponent,
+    AboutComponent
     
   ],
   imports: [
