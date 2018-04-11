@@ -13,7 +13,8 @@ export class ObservableComponent implements OnInit {
 
   users:User[];
   ngOnInit() {
-    this.service.getUsers().subscribe(items => this.users = items);
+    //this.service.getUsers().subscribe(items => this.users = items);
+    this.service.getAllUsers().subscribe(items => this.users = items);
   }
 
   handleClick(){

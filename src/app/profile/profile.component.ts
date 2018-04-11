@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, OnDestroy {
 
   constructor() { }
 
@@ -19,6 +20,10 @@ export class ProfileComponent implements OnInit {
     console.log(profile);
   }
   ngOnInit() {
+  }
+
+  ngOnDestroy(){
+    
   }
 
 }

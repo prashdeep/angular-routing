@@ -19,6 +19,21 @@ export class OService {
         });     
     }
 
+    getAllUsers():Observable<User[]>{
+        return this.http.get('https://jsonplaceholder.typicode.com/users')
+        .map(res =>{
+            return res.json().map( item =>{
+                return new User(item.id, item.name, item.email, item.phone, item.website);
+            });
+        })
+    }
+
+    getAllUsersUsingPromise():void{
+        this.http.get('https://jsonplaceholder.typicode.com/users')
+        .toPromise()
+        .then(response =>{console.log("called the promise method"); console.log(response.json());})
+    }
+
     createUser():void{
         let userT:User = new User(29, "Pradeep", "pradeep@gmail.com", "34234234", "cccl.com");
          this.http.post('https://jsonplaceholder.typicode.com/users', JSON.stringify(userT))
